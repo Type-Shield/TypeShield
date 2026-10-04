@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gizlilik politikası · TypeShield</title>
+  <meta name="description" content="TypeShield tarayıcı eklentisinin gizlilik politikası." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root { --paper: #f4f7f6; --ink: #14211c; --muted: #56645d; --line: #d5ddd9; --accent: #00806b; color-scheme: light dark; }
+    @media (prefers-color-scheme: dark) { :root { --paper: #0f1714; --ink: #e7efeb; --muted: #9fb0a8; --line: #2a3832; --accent: #12a58b; } }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.7 'Public Sans', 'Segoe UI', system-ui, sans-serif; }
+    main { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+    a { color: var(--accent); }
+    .back { font-size: 14px; }
+    h1, h2 { font-family: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif; line-height: 1.15; }
+    h1 { font-size: 38px; margin: 24px 0 4px; }
+    h2 { font-size: 22px; margin: 40px 0 8px; }
+    .updated { color: var(--muted); font-size: 14px; margin: 0 0 24px; }
+    .summary { padding: 18px 20px; border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 10px; }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; margin-top: 8px; }
+    th, td { text-align: left; padding: 10px 8px; border-top: 1px solid var(--line); vertical-align: top; }
+    th { color: var(--muted); font-weight: 600; border-top: none; }
+    ul { padding-left: 20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="./">← Ana sayfa</a>
+    <h1>Gizlilik politikası</h1>
+    <p class="updated">Son güncelleme: 4 Ekim 2026</p>
+
+    <p class="summary">
+      <strong>Kısaca:</strong> <span data-brand>TypeShield</span> eklentisi yazdığın metni yalnızca kendi
+      tarayıcında tarar. Mesajların, bulunan hassas değerler, ayarların ve istatistiklerin hiçbir sunucuya
+      gönderilmez; bizim de bunlara erişimimiz yoktur.
+    </p>
+
+    <h2>Eklenti ne yapar?</h2>
+    <p>
+      Desteklenen AI sitelerinde (şu an ChatGPT) mesaj gönderdiğin anda, yazdığın metni tarayıcının içinde tarar.
+      TC kimlik no, IBAN, şifre, API anahtarı gibi hassas veriler bulursa gönderimi durdurur ve sana maskeleme
+      seçeneği sunar. Tarama için internet bağlantısı ya da bir sunucu kullanılmaz.
+    </p>
+
+    <h2>Hangi veriler saklanır?</h2>
+    <p>Aşağıdakilerin hepsi yalnızca senin tarayıcında (<code>chrome.storage.local</code>) tutulur:</p>
+    <table>
+      <tr><th>Ne</th><th>Örnek</th><th>Neden</th></tr>
+      <tr><td>Ayarların</td><td>Koruma modu, veri tipi kuralları, kendi eklediğin terimler</td><td>Eklentinin senin tercihine göre çalışması için</td></tr>
+      <tr><td>Güvenli değerler listesi</td><td>Değerin kendisi değil, geri çevrilemez bir özeti (SHA-256) ve "ali•••om" gibi kısaltması</td><td>Güvenli saydığın değerlerin tekrar uyarı vermemesi için</td></tr>
+      <tr><td>İstatistikler</td><td>"3 TC kimlik no, ChatGPT, maskelendi, 14:32" gibi sayılar ve zaman</td><td>Popup ve rapor sayfasında sana göstermek için</td></tr>
+    </table>
+    <p>İstatistiklerde günlük kayıtlar 30 gün, son olaylar en fazla 20 kayıt tutulur. Eklenti ayarlarından istatistikleri istediğin zaman silebilirsin. Eklentiyi kaldırdığında bu verilerin hepsi tarayıcın tarafından silinir.</p>
+
+    <h2>Hangi veriler asla saklanmaz ya da gönderilmez?</h2>
+    <ul>
+      <li>Yazdığın ya da yapıştırdığın mesajların içeriği</li>
+      <li>Bulunan hassas değerlerin kendisi (TC kimlik no, IBAN, şifre vb.)</li>
+      <li>Ziyaret ettiğin sayfalar ya da tarama geçmişin</li>
+    </ul>
+    <p>Eklenti hiçbir analiz, reklam ya da izleme aracı içermez ve hiçbir veriyi üçüncü taraflarla paylaşmaz.</p>
+
+    <h2>Hangi izinleri kullanır?</h2>
+    <ul>
+      <li><strong>Depolama (storage):</strong> Ayarlarını ve istatistiklerini tarayıcında saklamak için.</li>
+      <li><strong>chatgpt.com erişimi:</strong> Gönder düğmesini ve Enter tuşunu yakalayıp mesajı göndermeden önce taramak için. Eklenti yalnızca desteklenen AI sitelerinde çalışır.</li>
+    </ul>
+
+    <h2>Bu web sitesi</h2>
+    <p>
+      Erken erişim formunu doldurursan e-posta adresin, seçtiğin kullanım tipi ve (yazdıysan) şirket adın,
+      sana eklenti hakkında haber vermek amacıyla form hizmet sağlayıcımız aracılığıyla bize iletilir. Bu bilgiler
+      başka bir amaçla kullanılmaz ve üçüncü taraflara satılmaz. Listeden çıkmak ya da bilgilerinin silinmesini
+      istemek için bize yazabilirsin.
+    </p>
+
+    <h2>Değişiklikler</h2>
+    <p>
+      İleride ekip sürümü gibi hesap gerektiren özellikler eklenirse, hangi verinin nereye gönderildiğini bu sayfada
+      açıkça yazacağız. Bireysel sürüm hesapsız ve sunucusuz kalacak.
+    </p>
+
+    <h2>İletişim</h2>
+    <p>Sorular için: <a id="contact" href="#">iletişim adresi eklenecek</a></p>
+  </main>
+  <script>
+    // Ana sayfadaki SITE ayarıyla aynı tutun
+    const BRAND = 'TypeShield';
+    const CONTACT_EMAIL = 'romanzeb@proton.me'; 
+    for (const el of document.querySelectorAll('[data-brand]')) el.textContent = BRAND;
+    document.title = `Gizlilik politikası · ${BRAND}`;
+    if (CONTACT_EMAIL) {
+      const a = document.getElementById('contact');
+      a.href = `mailto:${CONTACT_EMAIL}`;
+      a.textContent = CONTACT_EMAIL;
+    }
+  </script>
+</body>
+</html>
