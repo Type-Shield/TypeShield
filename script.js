@@ -4,7 +4,7 @@
 const SITE = {
   brand: 'TypeShield',
   // Formspree'deki formun adresi (formspree.io → formun sayfası)
-  formEndpoint: 'https://formspree.io/f/xaeqwqpk',
+  formEndpoint: 'https://formspree.io/f/xjygbjkv',
 };
 
 for (const el of document.querySelectorAll('[data-brand]')) el.textContent = SITE.brand;
