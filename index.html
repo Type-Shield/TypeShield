@@ -72,7 +72,7 @@
     <div class="tools" aria-label="Desteklenen yapay zekâ araçları">
       <div class="wrap">
         <div class="group">
-          <span class="k">AI PLATFORMLAR</span>
+          <span class="k">Korunan platformlar</span>
           <span class="chip on"><span class="pulse" aria-hidden="true"></span>ChatGPT</span>
           <span class="chip on"><span class="pulse" aria-hidden="true"></span>Claude</span>
           <span class="chip on"><span class="pulse" aria-hidden="true"></span>Gemini</span>
@@ -122,18 +122,23 @@
         <div class="catch">
           <div>
             <h3>Kişisel veriler</h3>
-            <p>Doğrulama algoritmasıyla kontrol edilir, rastgele 11 haneli sayı alarm vermez.</p>
+            <p>Kimlik, IBAN ve kart numaraları doğrulama algoritmasıyla kontrol edilir. Doğum tarihi gibi yaygın biçimler sadece yanında ilgili kelime varsa yakalanır.</p>
             <ul>
-              <li>TC kimlik no</li><li>Vergi kimlik no</li><li>IBAN</li><li>Kredi kartı</li><li>Telefon</li>
-              <li>E-posta</li><li>SGK sicil no</li><li>MERSİS no</li><li>Pasaport no</li><li>Araç plakası</li><li>IP adresi</li>
+              <li>TC kimlik no</li><li>Kimlik kartı seri no</li><li>Vergi kimlik no</li><li>IBAN (yurt içi ve yurt dışı)</li>
+              <li>Kredi kartı</li><li>Kart CVV ve son kullanma</li><li>Telefon</li><li>E-posta</li><li>Açık adres</li>
+              <li>Doğum tarihi</li><li>Anne kızlık soyadı</li><li>Sağlık bilgisi (tanı kodu)</li><li>SGK sicil no</li>
+              <li>MERSİS no</li><li>Pasaport no</li><li>Araç plakası</li><li>IP adresi</li>
             </ul>
           </div>
           <div>
             <h3>Şifre ve anahtarlar</h3>
-            <p>Yazılımcıların kod yapıştırırken en sık sızdırdığı bilgiler.</p>
+            <p>Yazılımcıların kod, .env dosyası ya da log yapıştırırken en sık sızdırdığı bilgiler.</p>
             <ul>
-              <li>Şifreler</li><li>OpenAI anahtarı</li><li>Anthropic anahtarı</li><li>AWS anahtarları</li><li>GitHub token</li>
-              <li>Google API anahtarı</li><li>Slack token</li><li>JWT</li><li>Bearer token</li><li>Private key</li><li>Veritabanı bağlantısı</li>
+              <li>Şifreler ve gizli anahtarlar</li><li>OpenAI ve Anthropic anahtarı</li><li>Groq, xAI, Hugging Face</li>
+              <li>AWS ve Azure anahtarları</li><li>Google API ve OAuth</li><li>GitHub ve GitLab token</li>
+              <li>Stripe, iyzico, PayTR</li><li>npm, PyPI, Docker Hub</li><li>SendGrid, Mailgun</li><li>Slack token</li>
+              <li>Slack, Discord, Teams webhook</li><li>Telegram bot token</li><li>JWT ve Bearer token</li>
+              <li>Private key (SSH, PGP)</li><li>Şifreli bağlantı adresi</li>
             </ul>
           </div>
         </div>
@@ -192,7 +197,7 @@
             <a class="btn" href="#katil" data-plan="bireysel">Erken erişime katıl</a>
             <p class="group">Neler var</p>
             <ul class="feat">
-              <li><span><b>22 veri tipi:</b> TC kimlik no'dan API anahtarına</span></li>
+              <li><span><b>30'dan fazla veri tipi:</b> TC kimlik no'dan API anahtarına</span></li>
               <li>8 yapay zekâ aracında çalışır</li>
               <li>Gönderim anında yakalama ve tek tıkla maskeleme</li>
               <li>Dört koruma modu ve veri tipine göre kurallar</li>
