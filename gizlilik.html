@@ -31,7 +31,7 @@
   <main>
     <a class="back" href="./">← Ana sayfa</a>
     <h1>Gizlilik politikası</h1>
-    <p class="updated">Son güncelleme: 4 Ekim 2026</p>
+    <p class="updated">Son güncelleme: 5 Ekim 2026</p>
 
     <p class="summary">
       <strong>Kısaca:</strong> <span data-brand>TypeShield</span> eklentisi yazdığın metni yalnızca kendi
@@ -41,7 +41,7 @@
 
     <h2>Eklenti ne yapar?</h2>
     <p>
-      Desteklenen AI sitelerinde (şu an ChatGPT) mesaj gönderdiğin anda, yazdığın metni tarayıcının içinde tarar.
+      Desteklenen yapay zekâ sitelerinde (ChatGPT, Claude, Gemini, Copilot, Perplexity, DeepSeek, Grok ve Mistral) mesaj gönderdiğin anda, yazdığın metni tarayıcının içinde tarar.
       TC kimlik no, IBAN, şifre, API anahtarı gibi hassas veriler bulursa gönderimi durdurur ve sana maskeleme
       seçeneği sunar. Tarama için internet bağlantısı ya da bir sunucu kullanılmaz.
     </p>
@@ -67,7 +67,7 @@
     <h2>Hangi izinleri kullanır?</h2>
     <ul>
       <li><strong>Depolama (storage):</strong> Ayarlarını ve istatistiklerini tarayıcında saklamak için.</li>
-      <li><strong>chatgpt.com erişimi:</strong> Gönder düğmesini ve Enter tuşunu yakalayıp mesajı göndermeden önce taramak için. Eklenti yalnızca desteklenen AI sitelerinde çalışır.</li>
+      <li><strong>Desteklenen yapay zekâ sitelerine erişim</strong> (chatgpt.com, chat.openai.com, claude.ai, gemini.google.com, copilot.microsoft.com, perplexity.ai, chat.deepseek.com, grok.com, chat.mistral.ai): Gönder düğmesini ve Enter tuşunu yakalayıp mesajı göndermeden önce taramak için. Eklenti bu siteler dışında hiçbir sayfada çalışmaz.</li>
     </ul>
 
     <h2>Bu web sitesi</h2>
@@ -90,7 +90,7 @@
   <script>
     // Ana sayfadaki SITE ayarıyla aynı tutun
     const BRAND = 'TypeShield';
-    const CONTACT_EMAIL = 'support.typeshield@proton.me'; 
+    const CONTACT_EMAIL = 'support.typeshield@proton.me';
     for (const el of document.querySelectorAll('[data-brand]')) el.textContent = BRAND;
     document.title = `Gizlilik politikası · ${BRAND}`;
     if (CONTACT_EMAIL) {
