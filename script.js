@@ -1,10 +1,6 @@
-/* =========================================================
-   AYARLAR
-   ========================================================= */
 const SITE = {
   brand: 'TypeShield',
-  // Formspree'deki formun adresi (formspree.io → formun sayfası)
-  formEndpoint: 'https://formspree.io/f/xjygbjkv',
+  formEndpoint: 'https://formspree.io/f/xaeqwqpk',
 };
 
 for (const el of document.querySelectorAll('[data-brand]')) el.textContent = SITE.brand;
@@ -12,9 +8,6 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
 
-/* =========================================================
-   Başlığın üstündeki örnek: veri yazılır, sonra etikete dönüşür
-   ========================================================= */
 const SAMPLES = [
   { label: 'TC kimlik no', value: '10000000146', token: '[TCKN_001]' },
   { label: 'IBAN', value: 'TR33 0006 1005 1978 6457 8413 26', token: '[IBAN_001]' },
@@ -41,9 +34,6 @@ if (ticker && !reduceMotion) {
   setInterval(show, 3200);
 }
 
-/* =========================================================
-   Canlı deneme: eklentideki motorun sadeleştirilmiş hali
-   ========================================================= */
 const digits = (s) => s.replace(/\D/g, '');
 
 function validTckn(raw) {
@@ -138,9 +128,6 @@ function renderDemo() {
 document.getElementById('demo-input').addEventListener('input', renderDemo);
 renderDemo();
 
-/* =========================================================
-   Erken erişim formu
-   ========================================================= */
 for (const a of document.querySelectorAll('[data-plan]')) {
   a.addEventListener('click', () => {
     document.querySelector('#signup select[name=plan]').value = a.dataset.plan;
@@ -184,9 +171,15 @@ document.getElementById('signup').addEventListener('submit', async (e) => {
   }
 });
 
-/* =========================================================
-   Yukarı çık butonu
-   ========================================================= */
+for (const btn of document.querySelectorAll('.more-btn')) {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('.cat');
+    const open = card.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+    btn.textContent = open ? 'Daha az göster' : `Tümünü gör (+${btn.dataset.rest})`;
+  });
+}
+
 const totop = document.getElementById('totop');
 const toggleTop = () => totop.classList.toggle('show', window.scrollY > 600);
 window.addEventListener('scroll', toggleTop, { passive: true });
