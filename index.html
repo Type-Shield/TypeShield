@@ -9,6 +9,8 @@
   <meta property="og:description" content="Yapay zekâya gönderdiğin mesajlardaki hassas veriyi, sen Enter'a basmadan yakalar ve maskeler." />
   <meta property="og:type" content="website" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#0f1714" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f4f7f6" media="(prefers-color-scheme: light)" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -33,7 +35,6 @@
   </header>
 
   <main>
-    <!-- ===== Giriş: başlık + canlı deneme ===== -->
     <section class="hero">
       <div class="wrap">
         <div>
@@ -68,7 +69,6 @@
       </div>
     </section>
 
-    <!-- ===== Desteklenen araçlar ===== -->
     <div class="tools" aria-label="Desteklenen yapay zekâ araçları">
       <div class="wrap">
         <div class="group">
@@ -85,7 +85,6 @@
       </div>
     </div>
 
-    <!-- ===== Nasıl çalışır ===== -->
     <section class="block" id="nasil">
       <div class="wrap">
         <div class="head">
@@ -109,7 +108,6 @@
       </div>
     </section>
 
-    <!-- ===== Neleri yakalar ===== -->
     <section class="block" id="neler">
       <div class="wrap">
         <div class="head">
@@ -117,18 +115,17 @@
           <p>Kişisel veriden API anahtarına, şirket içi sunucu adlarına kadar. Kimlik, IBAN ve kart numaraları doğrulama algoritmasıyla kontrol edilir; rastgele bir sayı alarm vermez.</p>
         </div>
         <div class="catch">
+          <div class="cat-col">
           <article class="cat">
             <div class="cat-head">
               <span class="cat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="12" r="2.5"/><path d="M14 10h4M14 14h3"/></svg></span>
               <h3>Kimlik ve iletişim</h3>
-              <span class="cat-count">10 tip</span>
+              <span class="cat-count">9 tip</span>
             </div>
             <p>Bir kişiyi doğrudan tanımlayan bilgiler. TC kimlik numarası doğrulama hanesiyle kontrol edilir.</p>
             <ul class="chips"><li>TC kimlik no</li><li>Telefon</li><li>E-posta</li><li>Açık adres</li></ul>
-            <details>
-              <summary>Tümünü gör</summary>
-              <ul class="chips"><li>TC kimlik no</li><li>Telefon</li><li>E-posta</li><li>Açık adres</li><li>Pasaport no</li><li>Kimlik kartı seri no</li><li>Doğum tarihi</li><li>Anne kızlık soyadı</li><li>Araç plakası</li><li>IP adresi</li></ul>
-            </details>
+            <div class="more" id="more-1"><div class="more-inner"><ul class="chips"><li>Pasaport no</li><li>Kimlik kartı seri no</li><li>Doğum tarihi</li><li>Araç plakası</li><li>IP adresi</li></ul></div></div>
+            <button type="button" class="more-btn" aria-expanded="false" aria-controls="more-1" data-rest="5">Tümünü gör (+5)</button>
           </article>
           <article class="cat">
             <div class="cat-head">
@@ -138,11 +135,11 @@
             </div>
             <p>Banka, kart ve resmi kayıt numaraları. IBAN ve kartlar algoritmayla doğrulanır, tutarlar alarm vermez.</p>
             <ul class="chips"><li>IBAN</li><li>Kredi kartı</li><li>Vergi kimlik no</li><li>SGK sicil no</li></ul>
-            <details>
-              <summary>Tümünü gör</summary>
-              <ul class="chips"><li>IBAN</li><li>Kredi kartı</li><li>Vergi kimlik no</li><li>SGK sicil no</li><li>KEP adresi</li><li>Yabancı IBAN</li><li>Kart CVV ve son kullanma</li><li>MERSİS no</li><li>Ticaret sicil no</li><li>e-Fatura ETTN</li></ul>
-            </details>
+            <div class="more" id="more-2"><div class="more-inner"><ul class="chips"><li>KEP adresi</li><li>Yabancı IBAN</li><li>Kart CVV ve son kullanma</li><li>MERSİS no</li><li>Ticaret sicil no</li><li>e-Fatura ETTN</li></ul></div></div>
+            <button type="button" class="more-btn" aria-expanded="false" aria-controls="more-2" data-rest="6">Tümünü gör (+6)</button>
           </article>
+          </div>
+          <div class="cat-col">
           <article class="cat">
             <div class="cat-head">
               <span class="cat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M14 9l2 2"/></svg></span>
@@ -151,10 +148,8 @@
             </div>
             <p>Kod, .env dosyası ya da hata logu yapıştırılırken en sık sızan bilgiler.</p>
             <ul class="chips"><li>Şifreler</li><li>OpenAI ve Anthropic</li><li>AWS ve Azure</li><li>GitHub token</li></ul>
-            <details>
-              <summary>Tümünü gör</summary>
-              <ul class="chips"><li>Şifreler</li><li>OpenAI ve Anthropic</li><li>AWS ve Azure</li><li>GitHub token</li><li>Private key</li><li>Groq, xAI, Hugging Face</li><li>Google API ve OAuth</li><li>GitLab token</li><li>Stripe, iyzico, PayTR</li><li>npm, PyPI, Docker Hub</li><li>SendGrid, Mailgun</li><li>Slack token</li><li>Slack, Discord, Teams webhook</li><li>Telegram bot token</li><li>JWT ve Bearer token</li><li>Şifreli bağlantı adresi</li></ul>
-            </details>
+            <div class="more" id="more-3"><div class="more-inner"><ul class="chips"><li>Private key</li><li>Groq, xAI, Hugging Face</li><li>Google API ve OAuth</li><li>GitLab token</li><li>Stripe, iyzico, PayTR</li><li>npm, PyPI, Docker Hub</li><li>SendGrid, Mailgun</li><li>Slack token</li><li>Slack, Discord, Teams webhook</li><li>Telegram bot token</li><li>JWT ve Bearer token</li><li>Şifreli bağlantı adresi</li></ul></div></div>
+            <button type="button" class="more-btn" aria-expanded="false" aria-controls="more-3" data-rest="12">Tümünü gör (+12)</button>
           </article>
           <article class="cat">
             <div class="cat-head">
@@ -164,16 +159,14 @@
             </div>
             <p>Gizlilik etiketli belgeler, iç altyapı bilgileri ve KVKK'da özel korunan sağlık verisi.</p>
             <ul class="chips"><li>Gizlilik etiketleri</li><li>Sağlık bilgisi</li><li>İç sunucu adları</li></ul>
-            <details>
-              <summary>Tümünü gör</summary>
-              <ul class="chips"><li>Gizlilik etiketleri</li><li>Sağlık bilgisi</li><li>İç sunucu adları</li><li>Domain kullanıcıları</li><li>Kendi terimlerin</li><li>Ağ paylaşım yolları</li><li>MAC adresleri</li></ul>
-            </details>
+            <div class="more" id="more-4"><div class="more-inner"><ul class="chips"><li>Domain kullanıcıları</li><li>Kendi terimlerin</li><li>Ağ paylaşım yolları</li><li>MAC adresleri</li></ul></div></div>
+            <button type="button" class="more-btn" aria-expanded="false" aria-controls="more-4" data-rest="4">Tümünü gör (+4)</button>
           </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== Kontrol sende ===== -->
     <section class="block">
       <div class="wrap">
         <div class="head">
@@ -193,7 +186,6 @@
       </div>
     </section>
 
-    <!-- ===== Gizlilik ===== -->
     <section class="block">
       <div class="wrap">
         <div class="privacy">
@@ -211,7 +203,6 @@
       </div>
     </section>
 
-    <!-- ===== Fiyatlar ===== -->
     <section class="block" id="fiyat">
       <div class="wrap">
         <div class="head">
@@ -263,7 +254,6 @@
       </div>
     </section>
 
-    <!-- ===== SSS ===== -->
     <section class="block" id="sss">
       <div class="wrap">
         <div class="head">
@@ -314,7 +304,6 @@
       </div>
     </section>
 
-    <!-- ===== Erken erişim ===== -->
     <div class="wrap">
       <section class="join" id="katil">
         <div>
@@ -345,11 +334,28 @@
 
   <footer>
     <div class="wrap">
-      <span>© <span id="year"></span> <span data-brand>TypeShield</span></span>
+      <div class="foot-brand">
+        <a class="logo" href="#" aria-label="Ana sayfa">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path class="shield" d="M16 2.5 4.5 7v8.4c0 7.2 4.8 12.4 11.5 14.6 6.7-2.2 11.5-7.4 11.5-14.6V7z"/><rect class="bar" x="9.5" y="14" width="13" height="4.2" rx="1.2"/></svg>
+          <span data-brand>TypeShield</span>
+        </a>
+        <p>Yapay zekâya yazdığın hassas veriyi, gitmeden önce yakalar.</p>
+        <p class="copy">© <span id="year"></span> <span data-brand>TypeShield</span></p>
+      </div>
       <nav aria-label="Alt menü">
-        <a href="#fiyat">Fiyatlar</a>
-        <a href="#sss">SSS</a>
-        <a href="gizlilik.html">Gizlilik politikası</a>
+        <div>
+          <b>Ürün</b>
+          <a href="#nasil">Nasıl çalışır</a>
+          <a href="#neler">Neleri yakalar</a>
+          <a href="#fiyat">Fiyatlar</a>
+          <a href="#sss">SSS</a>
+        </div>
+        <div>
+          <b>Şirket</b>
+          <a href="#katil">Erken erişim</a>
+          <a href="gizlilik.html">Gizlilik politikası</a>
+          <a href="mailto:support.typeshield@proton.me">support.typeshield@proton.me</a>
+        </div>
       </nav>
     </div>
   </footer>
