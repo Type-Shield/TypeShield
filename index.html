@@ -8,12 +8,10 @@
   <meta property="og:title" content="TypeShield · Yapay zekâya yazdığını koru" />
   <meta property="og:description" content="Yapay zekâya gönderdiğin mesajlardaki hassas veriyi, sen Enter'a basmadan yakalar ve maskeler." />
   <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="fonts.css" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <meta name="theme-color" content="#0f1714" media="(prefers-color-scheme: dark)" />
   <meta name="theme-color" content="#f4f7f6" media="(prefers-color-scheme: light)" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
@@ -94,7 +92,7 @@
         <ol class="steps">
           <li>
             <h3>Yazarsın</h3>
-            <p>Mesajını yazar ya da bir belgeden yapıştırırsın. Gönder'e bastığın anda <span data-brand>TypeShield</span> metni tarar.</p>
+            <p>Mesajını yazar ya da bir belgeden yapıştırırsın. Hassas bir şey yapıştırdığında hemen haber verir, Gönder'e bastığın anda da <span data-brand>TypeShield</span> metni tarar.</p>
           </li>
           <li>
             <h3>Yakalar</h3>
@@ -278,7 +276,7 @@
           </details>
           <details>
             <summary>Bilgisayarımı ya da tarayıcımı yavaşlatır mı?</summary>
-            <p>Hayır. Tarama sadece gönder'e bastığında yapılır ve göz açıp kapayıncaya kadar biter. Arka planda sürekli çalışmaz, desteklenen yapay zekâ siteleri dışındaki sayfalara hiç dokunmaz.</p>
+            <p>Hayır. Tarama sadece metin yapıştırdığında ve gönder'e bastığında yapılır, göz açıp kapayıncaya kadar biter. Arka planda sürekli çalışmaz, desteklenen yapay zekâ siteleri dışındaki sayfalara hiç dokunmaz.</p>
           </details>
           <details>
             <summary>Gerektiğinde kapatabilir miyim?</summary>
@@ -311,6 +309,7 @@
           <p>E-postanı bırak, eklenti yayınlandığında ilk sen haber al. Şirketler için ücretsiz pilot programına da buradan başvurabilirsin.</p>
         </div>
         <form class="signup" id="signup" novalidate>
+          <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <label>E-posta
             <input type="email" name="email" required autocomplete="email" placeholder="ad@firma.com" />
           </label>
