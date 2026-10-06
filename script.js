@@ -9,11 +9,16 @@ document.getElementById('year').textContent = new Date().getFullYear();
 const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
 
 const SAMPLES = [
+  { label: 'GitHub token', value: 'ghp_7Kx2mQ9vL…', token: '[GITHUB_TOKEN_001]' },
+  { label: 'Kredi kartı', value: '4111 1111 1111 1111', token: '[CREDIT_CARD_001]' },
+  { label: 'AWS anahtarı', value: 'AKIAIOSFODNN7EXAMPLE', token: '[AWS_ACCESS_KEY_001]' },
+  { label: 'E-posta', value: 'ali@firma.com.tr', token: '[EMAIL_001]' },
+  { label: 'Veritabanı', value: 'postgres://admin:••••@db01', token: '[CONNECTION_STRING_001]' },
   { label: 'TC kimlik no', value: '10000000146', token: '[TCKN_001]' },
-  { label: 'IBAN', value: 'TR33 0006 1005 1978 6457 8413 26', token: '[IBAN_001]' },
+  { label: 'Slack token', value: 'xoxb-2913-4471…', token: '[SLACK_TOKEN_001]' },
   { label: 'Şifre', value: 'Kahve2026!', token: '[PASSWORD_001]' },
-  { label: 'API anahtarı', value: 'sk-proj-8fQ2…', token: '[OPENAI_KEY_001]' },
-  { label: 'Telefon', value: '0532 123 45 67', token: '[PHONE_001]' },
+  { label: 'JWT', value: 'eyJhbGciOiJIUzI1…', token: '[JWT_001]' },
+  { label: 'OpenAI anahtarı', value: 'sk-proj-8fQ2…', token: '[OPENAI_KEY_001]' },
 ];
 const ticker = document.getElementById('ticker');
 if (ticker && !reduceMotion) {
@@ -68,7 +73,7 @@ function validCard(raw) {
 const RULES = [
   { type: 'PRIVATE_KEY', label: 'Private key', re: /-----BEGIN [A-Z ]*PRIVATE KEY-----[\s\S]*?-----END [A-Z ]*PRIVATE KEY-----/g },
   { type: 'OPENAI_KEY', label: 'OpenAI anahtarı', re: /\bsk-(?:proj-)?[A-Za-z0-9_-]{20,}/g },
-  { type: 'AWS_KEY', label: 'AWS anahtarı', re: /\b(?:AKIA|ASIA)[A-Z0-9]{16}\b/g },
+  { type: 'AWS_ACCESS_KEY', label: 'AWS anahtarı', re: /\b(?:AKIA|ASIA)[A-Z0-9]{16}\b/g },
   { type: 'GITHUB_TOKEN', label: 'GitHub token', re: /\bgh[pousr]_[A-Za-z0-9]{36}\b/g },
   { type: 'PASSWORD', label: 'Şifre', re: /(?:password|şifre|parola)["']?\s*[:=]\s*["']?([^\s"',;]{4,})/gi, group: 1 },
   { type: 'IBAN', label: 'IBAN', re: /\bTR\d{2}(?:[\s-]?\d{4}){5}[\s-]?\d{2}\b/gi, ok: validIban },
