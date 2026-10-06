@@ -139,6 +139,12 @@ document.getElementById('signup').addEventListener('submit', async (e) => {
   const form = e.currentTarget;
   const msg = document.getElementById('signup-msg');
   const email = form.email.value.trim();
+  if (form._gotcha.value) {
+    form.reset();
+    msg.textContent = 'Listeye eklendin. Eklenti hazır olduğunda e-posta göndereceğiz.';
+    msg.classList.add('ok');
+    return;
+  }
   msg.className = 'msg';
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     msg.textContent = 'Geçerli bir e-posta adresi yaz.';
