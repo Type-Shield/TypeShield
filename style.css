@@ -58,6 +58,7 @@ h1, h2, h3 { font-family: var(--display); line-height: 1.1; margin: 0; letter-sp
 
 .top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--paper) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+.hp { display: none !important; }
 .logo { display: flex; align-items: center; gap: 10px; font: 700 19px var(--display); text-decoration: none; }
 .logo svg { width: 26px; height: 26px; }
 .logo .shield { fill: var(--accent); }
