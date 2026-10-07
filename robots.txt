@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://type-shield.github.io/sitemap.xml

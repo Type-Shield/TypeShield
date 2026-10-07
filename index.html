@@ -4,16 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TypeShield · Yapay zekâya yazdığını koru</title>
-  <meta name="description" content="TypeShield, ChatGPT, Claude, Gemini gibi yapay zekâ araçlarına gönderdiğin mesajlardaki TC kimlik no, IBAN, şifre ve API anahtarlarını sen göndermeden yakalar ve maskeler. Her şey tarayıcında olur." />
+  <meta name="description" content="TypeShield, yapay zekâ araçları için tarayıcıda çalışan bir DLP (veri sızıntısı önleme) eklentisidir. Mesajlardaki kişisel verileri (PII), şifre ve API anahtarlarını sen göndermeden yakalar ve maskeler. Her şey tarayıcında olur." />
   <meta property="og:title" content="TypeShield · Yapay zekâya yazdığını koru" />
   <meta property="og:description" content="Yapay zekâya gönderdiğin mesajlardaki hassas veriyi, sen Enter'a basmadan yakalar ve maskeler." />
   <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://type-shield.github.io/" />
+  <meta property="og:url" content="https://type-shield.github.io/" />
+  <meta property="og:site_name" content="TypeShield" />
+  <meta property="og:locale" content="tr_TR" />
+  <meta property="og:image" content="https://type-shield.github.io/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="TypeShield: yapay zekâya yazdığın hassas veriyi gönderilmeden maskeler" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="fonts.css" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <meta name="theme-color" content="#0f1714" media="(prefers-color-scheme: dark)" />
   <meta name="theme-color" content="#f4f7f6" media="(prefers-color-scheme: light)" />
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "TypeShield", "applicationCategory": "SecurityApplication", "operatingSystem": "Chrome", "description": "Yapay zekâ araçlarına yazılan mesajlardaki kişisel verileri, şifre ve API anahtarlarını gönderilmeden tespit edip maskeleyen tarayıcı eklentisi.", "url": "https://type-shield.github.io/", "inLanguage": "tr", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "TRY"}}</script>
 </head>
 <body>
   <header class="top">
@@ -111,7 +123,7 @@
       <div class="wrap">
         <div class="head">
           <h2>35'ten fazla veri tipini tanır</h2>
-          <p>Kişisel veriden API anahtarına, şirket içi sunucu adlarına kadar. Kimlik, IBAN ve kart numaraları doğrulama algoritmasıyla kontrol edilir; rastgele bir sayı alarm vermez.</p>
+          <p>Kişisel verilerden (PII) API anahtarına, şirket içi sunucu adlarına kadar. Kimlik, IBAN ve kart numaraları doğrulama algoritmasıyla kontrol edilir; rastgele bir sayı alarm vermez.</p>
         </div>
         <div class="catch">
           <div class="cat-col">
@@ -231,7 +243,7 @@
           <div class="plan team">
             <span class="badge">Şirketler için</span>
             <h3>Kurumsal</h3>
-            <p class="for">Çalışanlarının yapay zekâ kullanımını yönetmek isteyen şirketler için</p>
+            <p class="for">Yapay zekâ kullanımı için hafif bir DLP katmanı arayan şirketler için</p>
             <div class="price">79 ₺<small>kullanıcı başı / ay</small></div>
             <p class="fine">Pilot programa katılan ilk şirketlere ücretsiz.</p>
             <a class="btn primary" href="#katil" data-plan="kurumsal">Pilot için başvur</a>
@@ -344,6 +356,10 @@
             <p>Evet. Ayarlardan korumayı tamamen kapatabilir ya da tek bir mesaj için "Yine de gönder" diyebilirsin. Katı modda ve "Engelle" kuralı olan veri tiplerinde bu seçenek bilerek gösterilmez.</p>
           </details>
           <details>
+            <summary>TypeShield bir DLP ürünü mü?</summary>
+            <p>Evet, yapay zekâ kullanımına odaklanmış hafif bir DLP (veri sızıntısı önleme) katmanıdır. Kişisel verileri (PII), finansal verileri, şifre ve API anahtarlarını ve şirket içi bilgileri tespit eder; senin seçimine göre uyarır, maskeler ya da engeller. E-posta, dosya ya da ağ trafiğini izleyen kurumsal DLP çözümlerinin yerini almaz. Sadece yapay zekâ araçlarına yazılan metne odaklandığı için ajan ya da sunucu kurulumu gerektirmez, dakikalar içinde devreye alınır.</p>
+          </details>
+          <details>
             <summary>KVKK uyumu için yeterli mi?</summary>
             <p><span data-brand>TypeShield</span>, kişisel verilerin yapay zekâ hizmetlerine gönderilmesini önleyen teknik bir tedbirdir. Tek başına KVKK uyumu sağlamaz. Şirketinin politikaları ve hukuki süreçleriyle birlikte düşünülmelidir.</p>
           </details>
@@ -416,6 +432,10 @@
           <a href="#katil">Erken erişim</a>
           <a href="gizlilik.html">Gizlilik politikası</a>
           <a href="mailto:support.typeshield@proton.me">support.typeshield@proton.me</a>
+        </div>
+        <div>
+          <b>Takip et</b>
+          <a href="https://www.instagram.com/typeshield_tr/" target="_blank" rel="noopener">Instagram</a>
         </div>
       </nav>
     </div>
