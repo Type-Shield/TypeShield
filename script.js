@@ -146,7 +146,7 @@ document.getElementById('signup').addEventListener('submit', async (e) => {
   const email = form.email.value.trim();
   if (form._gotcha.value) {
     form.reset();
-    msg.textContent = 'Listeye eklendin. Eklenti hazır olduğunda e-posta göndereceğiz.';
+    msg.textContent = 'Listeye eklendin. Yeni gelişmelerde sana yazacağız.';
     msg.classList.add('ok');
     return;
   }
@@ -172,7 +172,7 @@ document.getElementById('signup').addEventListener('submit', async (e) => {
     });
     if (!res.ok) throw new Error();
     form.reset();
-    msg.textContent = 'Listeye eklendin. Eklenti hazır olduğunda e-posta göndereceğiz.';
+    msg.textContent = 'Listeye eklendin. Yeni gelişmelerde sana yazacağız.';
     msg.classList.add('ok');
   } catch {
     msg.textContent = 'Gönderilemedi. Biraz sonra tekrar dene.';
