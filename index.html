@@ -101,29 +101,39 @@
           <h2>Enter'a bastığın an devreye girer</h2>
           <p>Ayrı bir uygulama açmana ya da alışkanlığını değiştirmene gerek yok. Yapay zekâyı her zamanki gibi kullanırsın.</p>
         </div>
-        <ol class="steps">
-          <li>
-            <div class="shot"><img src="img/adim-1.webp" alt="Hassas veri yapıştırılınca çıkan TypeShield bildirimi" width="1200" height="393" loading="lazy" /></div>
-            <div class="txt">
-            <h3>Yazarsın</h3>
-            <p>Mesajını yazar ya da bir belgeden yapıştırırsın. Hassas bir şey yapıştırdığında hemen haber verir, Gönder'e bastığın anda da <span data-brand>TypeShield</span> metni tarar.</p>
+        <div class="flow" id="flow">
+          <ol class="flow-steps">
+            <li>
+              <button type="button" class="flow-step is-active" data-step="0" aria-pressed="true">
+                <span class="n">1</span>
+                <span class="t"><b>Yazarsın</b><span>Mesajını yazar ya da yapıştırırsın. Hassas bir şey yapıştırdığında <span data-brand>TypeShield</span> hemen haber verir.</span></span>
+                <i class="prog" aria-hidden="true"></i>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="flow-step" data-step="1" aria-pressed="false">
+                <span class="n">2</span>
+                <span class="t"><b>Yakalar</b><span>Gönder'e bastığında hassas veri varsa gönderim durur ve neyin bulunduğunu gösteren bir pencere açılır.</span></span>
+                <i class="prog" aria-hidden="true"></i>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="flow-step" data-step="2" aria-pressed="false">
+                <span class="n">3</span>
+                <span class="t"><b>Maskelersin</b><span>Tek tıkla veriler <span class="tok">[TCKN_001]</span> gibi etiketlere dönüşür. Yapay zekâ işini yapar, gerçek değeri görmez.</span></span>
+                <i class="prog" aria-hidden="true"></i>
+              </button>
+            </li>
+          </ol>
+          <div class="stage">
+            <div class="stage-top" aria-hidden="true"><i></i><i></i><i></i><span>chatgpt.com</span></div>
+            <div class="stage-body">
+              <img class="is-active" src="img/adim-1.webp" alt="Hassas veri yapıştırılınca çıkan TypeShield bildirimi" width="1200" height="393" loading="lazy" />
+              <img src="img/adim-2.webp" alt="TypeShield uyarı penceresi: 3 hassas veri bulundu" width="916" height="648" loading="lazy" />
+              <img src="img/adim-3.webp" alt="Yapay zekâya maskelenmiş olarak giden mesaj" width="920" height="300" loading="lazy" />
             </div>
-          </li>
-          <li>
-            <div class="shot"><img src="img/adim-2.webp" alt="TypeShield uyarı penceresi: 3 hassas veri bulundu" width="1000" height="720" loading="lazy" /></div>
-            <div class="txt">
-            <h3>Yakalar</h3>
-            <p>Hassas veri yoksa mesaj hiç beklemeden gider. Varsa gönderim durur ve neyin bulunduğunu gösteren bir pencere açılır.</p>
-            </div>
-          </li>
-          <li>
-            <div class="shot"><img src="img/adim-3.webp" alt="Yapay zekâya maskelenmiş olarak giden mesaj" width="920" height="300" loading="lazy" /></div>
-            <div class="txt">
-            <h3>Maskelersin</h3>
-            <p>Tek tıkla veriler <span class="tok">[TCKN_001]</span> gibi etiketlere dönüşür. Yapay zekâ metni anlar ve işini yapar, gerçek değeri görmez.</p>
-            </div>
-          </li>
-        </ol>
+          </div>
+        </div>
       </div>
     </section>
 

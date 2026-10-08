@@ -196,3 +196,67 @@ const toggleTop = () => totop.classList.toggle('show', window.scrollY > 600);
 window.addEventListener('scroll', toggleTop, { passive: true });
 toggleTop();
 totop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
+
+const flow = document.getElementById('flow');
+if (flow) {
+  const steps = [...flow.querySelectorAll('.flow-step')];
+  const shots = [...flow.querySelectorAll('.stage-body img')];
+  const MS = 5000;
+  let current = 0;
+  let timer = null;
+  let visible = false;
+  let hovered = false;
+  flow.style.setProperty('--flow-ms', MS + 'ms');
+  const show = (i) => {
+    current = (i + steps.length) % steps.length;
+    steps.forEach((s, k) => {
+      s.classList.toggle('is-active', k === current);
+      s.setAttribute('aria-pressed', String(k === current));
+      const bar = s.querySelector('.prog');
+      bar.style.animation = 'none';
+      void bar.offsetWidth;
+      bar.style.animation = '';
+    });
+    shots.forEach((img, k) => img.classList.toggle('is-active', k === current));
+  };
+  const stop = () => {
+    clearTimeout(timer);
+    timer = null;
+  };
+  const run = () => {
+    stop();
+    if (reduceMotion || !visible || hovered) return;
+    timer = setTimeout(() => {
+      show(current + 1);
+      run();
+    }, MS);
+  };
+  const sync = () => {
+    const playing = !reduceMotion && visible;
+    flow.classList.toggle('playing', playing);
+    flow.classList.toggle('paused', hovered);
+    run();
+  };
+  steps.forEach((s, k) =>
+    s.addEventListener('click', () => {
+      show(k);
+      sync();
+    }),
+  );
+  flow.addEventListener('mouseenter', () => {
+    hovered = true;
+    sync();
+  });
+  flow.addEventListener('mouseleave', () => {
+    hovered = false;
+    show(current);
+    sync();
+  });
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver((entries) => {
+      visible = entries[0].isIntersecting;
+      sync();
+    }, { threshold: 0.35 }).observe(flow);
+  }
+  show(0);
+}
